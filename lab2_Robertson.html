@@ -80,6 +80,20 @@
         else{
             console.log(`ERROR! ${password} is NOT at the right format`)
         }
+        let userInput = prompt("Please enter a value:");
+
+        if (!isNaN(userInput) && userInput !== '') {
+        let num = parseFloat(userInput);
+        if (num > 0) {
+            console.log(num + " is a positive number.");
+        } else if (num < 0) {
+            console.log(num + " is a negative number.");
+        } else {
+        console.log(num + " is zero.");
+            }
+        } else {
+        console.log(userInput + " is a string.");
+        }    
     </script>
 </body>
 </html>
