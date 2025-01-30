@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ET712 - Dillon Robertson</h1>
+    <script>
+        // declare a variable with initial value
+        let username = "raven"; // string variable
+        let id = 24681012; // numerical variable
+        let check = false; // Boolean variable
+
+        // console information
+        console.log("Entered username = ", username);
+       // console.log(username, " has id number = ", id);
+       console.log(`${username} has id number = ${id}`)
+       
+
+
+       //collect two numbers using a prompt window and display the sum of the two numbers in the console
+       //step 1: declare variables
+       let n1;
+       let n2;
+       //step 2: collect two numbers from the user
+       n1 = prompt("Enter number 1")
+       n2 = prompt("Enter number 2")
+       // step 3: display result in the console 
+       console.log(`The sum of number ${n1} and ${n2} is ${n1+n2}`)
+
+
+
+
+
+       //accessing characters in a string
+       let firstname = "robin"
+       console.log(`The third character = ${firstname[2]}`)
+       //find the length of a string
+       let totalchar = firstname.length
+       console.log(`${firstname} has ${totalchar} characters`)
+       // convert string into upper-case
+       console.log(firstname.toUpperCase())
+       // convert string to lower-case
+       firstname = firstname.toLowerCase()
+       console.log(firstname)
+       // search for a specific character
+       let mysearch = firstname.search('Way')
+       console.log(`The found index is = ${mysearch}`) // if it doesn't find any matches, it return -1
+       // remove white space before and after a string
+       let password = "    I'm Batman   "
+       console.log(password)
+       password = password.trim()
+       console.log(password)
+       // substracting character
+       console.log(password.substr(4,3)) // 4 = index, 3 = number of character from the selected index.
+       // replacing characters
+       let school = "Queensborough Community College"
+       console.log(school)
+       console.log(school.replace("Community", "PARK"))
+        //extracting 
+        console.log(school.slice(6,13))
+
+
+
+
+        n3 = prompt("Enter number 3")
+        console.log("The second letter of the word is: a.")
+        console.log("The length of the word raven is (4,6)")
+        console.log("The last two characters of the word are en")
+        let name = "raven"
+        console.log(name)
+         console.log(name.toUpperCase())
+       //extracting
+      // convert string into upper-case
+       console.log(name.slice(3,5))
+
+    </script>
+    
+</body>
+</html>
