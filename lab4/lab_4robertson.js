@@ -93,3 +93,30 @@ function randomcolor(picked_index){
 }
 
 console.log(`Color picked = ${randomcolor()}`)
+
+function checkName() {
+  let name;
+  
+  while (true) {
+    name = prompt("Enter your name:");
+    
+    if (name === null) {
+      alert("You forgot to enter a name. Enter a name again:");
+      continue;
+    }
+    
+    if (name.trim() === "") {
+      alert("You forgot to enter a name. Enter a name again:");
+      continue;
+    }
+    
+    if (!isNaN(name)) {
+      alert(`${name} is invalid! Enter a name again:`);
+      continue;
+    }
+    
+    break;
+  }
+  
+  console.log(`Welcome ${name.toUpperCase()} to the class!`);
+}
