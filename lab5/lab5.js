@@ -84,3 +84,38 @@ function yell(msg){
 yell("help ")
 yell(8)
 console.log("end of example 8")
+
+const myCalculator = {
+    message: "This is a calculator.",
+    side: 2,
+  
+    // Method to calculate area of a square
+    area_square: function() {
+      return Math.pow(this.side, 2);  // area = side^2
+    },
+  
+    // Method to calculate volume of a cube
+    volume_cube: function() {
+      return Math.pow(this.side, 3);  // volume = side^3
+    }
+  };
+  
+  // Test the object and methods
+  console.log(myCalculator.message);  // Display message
+  console.log("Area of square:", myCalculator.area_square());  // Calculate area of square
+  console.log("Volume of cube:", myCalculator.volume_cube());  // Calculate volume of cube
+  
+function divideNumbers(a, b) {
+    try {
+      if (b === 0) {
+        throw new Error("Cannot divide by zero.");
+      }
+      return a / b;  // Try dividing a by b
+    } catch (error) {
+      return 'Error performing the division: ' + error.message;  // Return error message if exception occurs
+    }
+  }
+  
+  // Test the divideNumbers function
+  console.log(divideNumbers(10, 2));  // Valid division: 10 / 2 = 5
+  console.log(divideNumbers(10, 0));  // Division by zero: Error message
