@@ -90,18 +90,31 @@ inputex9.onkeydown = function(event){
 let ps1 = document.querySelector(".ps1")
 
 // add a mouseout event to change the text content to "STUDENT'S FULL NAME"
-
+ps1.addEventListener('mouseout', function(){
+    ps1.textcontent = "Dillon Joshua Robertson";
+});
 
 // search for the second p with class ps2
+const ps2 = document.querySelector('p.ps2');
 
 // add a click event to the ps2 to change the font-size to 25px  and color to olive when is clicked
-
+ps2.addEventListener('click', function() {
+    ps2.style.fontSize = '25px';
+    ps2.style.color = 'olive';
+});
 
 // search for the first div with class divs2
+const divs2 = document.querySelector('div.divs2');
 
 // add a click event to change the background color to indigo
+divs2.addEventListener('click', function() {
+    divs2.style.backgroundColor = 'indigo';
+});
 
-
-// search for the second div with class divs2
+// search for the second div with class divs3
+const divs3 = document.querySelector('div.divs3');
 
 // add a keydown event to change the width of divs2 to 300px
+divs3.addEventListener('keydown', function() {
+    divs3.style.width = '300px';
+});
