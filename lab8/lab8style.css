@@ -1,0 +1,76 @@
+/* example 1*/
+.btnpressme{
+    display: block;
+    padding: 1em 2em;
+    border-radius: 10px;
+    background-color:darkgoldenrod;
+}
+.btnactive{
+    background-color: lightcoral;
+    font-weight: bolder;
+}
+
+/* example 2*/
+
+#fruitlist li{
+    list-style: none;
+    border-bottom: 1px solid red;
+    width: 200px;
+    padding: 1em 2em;
+}
+#fruitlist li:hover{
+    background-color: aqua;
+    color: green;
+}
+
+/*example 4*/
+img{width: 100%; display: block;}
+.card{
+    width: 200px;
+    box-shadow: 1px 1px 5px lightblue;
+}
+.linkreadmore{
+    display: block;
+    background-color: blue;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em; 
+    color: aliceblue;
+}
+.linkreadmore:hover{
+    background-color: crimson;
+}
+.modalwindow{
+    background-color: rgba(50,50,50, 0.7);
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: none;
+}
+.modalcontent{
+    width: 60%;
+    height: 70%;
+    margin: 10% auto;
+    background-color: white;
+}
+.modalheader{
+    background-color: antiquewhite;
+    display: flex;
+    padding: 0.5em;
+
+}
+.closex{
+    display: block;
+    padding: 0.5em;
+    margin-left: auto;
+    font-size: 2em;
+    text-align: center;
+}
+.closex:hover{
+    color: royalblue;
+}
+.info{
+    padding: 1em;
+}
