@@ -43,6 +43,62 @@
         </div>
     </section>
 
-    <script src="lab8.js"></script>
+    <h2>Lab Excercise</h2>
+    
+    /* Circle styling */
+        .circle {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        /* Reset button styling */
+        .reset-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Basic styling for the container */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    <div class="container">
+        <div class="circle" id="circle">
+            0
+        </div>
+        <button class="reset-button" id="resetButton">Reset</button>
+    </div>
+
+    <script>
+        // JavaScript code to track touch and reset count
+        let touchCount = 0; // Initialize the touch counter
+
+        const circle = document.getElementById("circle");
+        const resetButton = document.getElementById("resetButton");
+
+        // Event listener for when the circle is clicked
+        circle.addEventListener("click", function() {
+            touchCount++;  // Increment the counter
+            circle.textContent = touchCount;  // Update the displayed number
+        });
+
+        // Event listener for when the reset button is clicked
+        resetButton.addEventListener("click", function() {
+            touchCount = 0;  // Reset the counter to zero
+            circle.textContent = touchCount;  // Update the displayed number back to zero
+        });    
+        <script src="lab8.js"></script>
 </body>
 </html>
