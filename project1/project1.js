@@ -15,20 +15,20 @@ document.getElementById("countbtn").addEventListener("click", function() {
     `;
 });
 
-document.getElementById("colorsBtn").addEventListener("click", function() {
+document.getElementById("colorsbtn").addEventListener("click", function() {
     document.getElementById("content").innerHTML = `
         <h2>Learn Colors!</h2>
         <p>Click on a color to see it!</p>
         <div>
             <button style="background-color: red;" onclick="showColor('Red')">Red</button>
             <button style="background-color: blue;" onclick="showColor('Blue')">Blue</button>
-            <button style="background-color: green;" onclick="showColor('Green')">Green</button>
+            <button style="background-color: pink;" onclick="showColor('Pink')">Pink</button>
             <button style="background-color: yellow;" onclick="showColor('Yellow')">Yellow</button>
         </div>
     `;
 });
 
-document.getElementById("shapesBtn").addEventListener("click", function() {
+document.getElementById("shapesbtn").addEventListener("click", function() {
     document.getElementById("content").innerHTML = `
         <h2>Learn Shapes!</h2>
         <p>Click on a shape to learn about it!</p>
@@ -54,6 +54,10 @@ function showShape(shape) {
     document.getElementById("content").innerHTML = `
         <h2>You clicked the ${shape}!</h2>
         <p>This is a ${shape} shape!</p>
+        <img src="Circle.png">
+        <img src="Square.png">
+        <img src="Triangle.png">
+        <img src="rectangle.gif">
     `;
 }
 
