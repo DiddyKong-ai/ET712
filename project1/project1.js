@@ -41,6 +41,31 @@ document.getElementById("shapesbtn").addEventListener("click", function() {
     `;
 });
 
+// Set up event listeners for buttons
+circleButton.addEventListener('click', () => {
+    shapeImage.src = 'Circle.png'; // Circle Image URL
+    shapeImage.alt = 'Circle';
+    shapeImage.style.display = 'block'; // Show image
+});
+
+squareButton.addEventListener('click', () => {
+    shapeImage.src = 'Square.png'; // Square Image URL
+    shapeImage.alt = 'Square';
+    shapeImage.style.display = 'block'; // Show image
+});
+
+triangleButton.addEventListener('click', () => {
+    shapeImage.src = 'Triangle.png'; // Triangle Image URL
+    shapeImage.alt = 'Triangle';
+    shapeImage.style.display = 'block'; // Show image
+});
+
+rectangleButton.addEventListener('click', () => {
+    shapeImage.src = 'rectangle.gif'; // Rectangle Image URL
+    shapeImage.alt = 'Rectangle';
+    shapeImage.style.display = 'block'; // Show image
+});
+
 // Function to show color
 function showColor(color) {
     document.getElementById("content").innerHTML = `
@@ -54,10 +79,6 @@ function showShape(shape) {
     document.getElementById("content").innerHTML = `
         <h2>You clicked the ${shape}!</h2>
         <p>This is a ${shape} shape!</p>
-        <img src="Circle.png">
-        <img src="Square.png">
-        <img src="Triangle.png">
-        <img src="rectangle.gif">
     `;
 }
 
