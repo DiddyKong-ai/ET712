@@ -11,10 +11,9 @@ function App() {
     <>
       <h1>User Comments</h1>
       <main className='maincontainer'>
-        <User/>
-      <User/>
-      <User/>
-      <User/>  
+        <User image={papermario} username="PaperMario" date="04/01/25" usercomment="Great Job!"/>
+        <User image={boo} username="Boo" date="04/11/25" usercomment="Super!"/>
+        <User image={luma} username="Luma" date="04/01/25" usercomment="Excellent!"/>  
       </main>
       
     
