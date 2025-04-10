@@ -13,9 +13,10 @@ function App() {
     <>
       <h1>User Comments</h1>
       <main className='maincontainer'>
-        <User_feedback/><User image={papermario} username="Mario" date="04/10/25" usercomment="Good Job!"/><User_feedback/>
-        <User_feedback/><User image={boo} username="Boo" date="04/5/25" usercomment="Super!"/><User_feedback/>
-        <User_feedback/><User image={luma} username="Luma" date="04/24/25" usercomment="Excellent!"/><User_feedback/>
+        <User/>
+      <User/>
+      <User/>
+      <User/>  
       </main>
 
     
