@@ -13,8 +13,6 @@ img{width: 100%; display: block;}
 /* card */
 .card{
   width: 250px;
-  box-shadow: 2px 2px 5px black;
-  border-radius: 10px;
   padding: 1rem;
   margin: 1rem;
 }
@@ -31,12 +29,52 @@ img{width: 100%; display: block;}
   color:blue;
   font-size: 0.8em;
 }
-.card:hover{
-  box-shadow: none;
-  border: solid 3px paleturquoise;
-}
+
 /* App.js*/
 .maincontainer{
   display: flex;
   justify-content: center;
 }
+/* feedback.js */
+.feedbackcontainer:hover{
+  box-shadow: none;
+  border: solid 2px gray;
+}
+.content{
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.description{
+  text-align: center;
+  font-style: italic;
+  color: red;
+}
+.cardfooter{
+  background-color: cornflowerblue;
+  text-align: center;
+  color: palevioletred;
+  padding: 5px;
+  margin-top: 2rem;
+}
+/* modalwindow.js */
+.modalwindow{
+  background-color: rgba(50, 50, 50, 0.6);
+  position: fixed;
+  inset: 0% 0% 0% 0%;
+  display: none;
+}
+.modalheader p:nth-child(1){width: 92%;}
+.commentarea{width: 100%; height: 3rem;}
+btnpostfeedback{
+  width: 100%;
+  background-color: orange;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+.btnpostfeedback:hover, .closemodal:hover{
+  background-color: crimson;
+  font-weight: bolder;
+  cursor: pointer;
+} 
