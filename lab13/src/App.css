@@ -1,0 +1,26 @@
+/* navbars.js */
+.title{
+  color: red;
+  text-align: center;
+  padding: 2%;
+}
+.navheader{
+  display: flex;
+  justify-content: center;
+}
+.iconlink{
+  width: 30%;
+  padding: 2%;
+}
+.navlinks{
+  background-color: aqua;
+  width: 70%;
+  padding: 2%;
+  display: flex;
+  justify-content: end;
+}
+.tablink{
+  width: 30%;
+  border: none;
+  background-color: darkblue;
+}
