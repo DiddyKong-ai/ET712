@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ModalWindow from './ModalWindow';
+import ModalWindow from './modalwindow';
 
 export default function Card({ product, addToCart }) {
   const [quantity, setQuantity] = useState(1);

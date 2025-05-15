@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbars';
-import ProductPage from './components/ProductPage';
-import CartPage from './components/CartPage';
-import { products } from './data';
+import Navbar from './component/navbars';
+import ProductPage from './component/ProductPage';
+import CartPage from './component/CartPage';
+import ProductList from './component/ProductPage';
 
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -24,7 +24,7 @@ export default function App() {
     <>
       <Navbar cartCount={cartItems.reduce((acc, item) => acc + item.quantity, 0)} />
       <Routes>
-        <Route path="/" element={<ProductPage products={products} addToCart={addToCart} />} />
+        <Route path="/" element={<ProductPage products={ProductList} addToCart={addToCart} />} />
         <Route path="/cart" element={<CartPage cartItems={cartItems} />} />
       </Routes>
     </>
