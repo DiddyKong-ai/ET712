@@ -1,9 +1,17 @@
 import './styles/styles.css'
 import React, { useState } from 'react';
+import './styles/styles.css';
 import { products } from './component/data';
 import Card from './component/card';
 import CartPage from './component/CartPage';
-import './styles/styles.css';
+// import images
+import amibo from './images/amibo.png'
+import banner from './images/banner.png'
+import computer from './images/computer.png'
+import console from './images/console.png'
+import games from './images/games.png'
+import technology from './images/technology.png'
+
 
 
 export default function App() {
