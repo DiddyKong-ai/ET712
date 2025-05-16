@@ -1,12 +1,14 @@
+import './styles/styles.css'
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './component/navbars';
-import ProductPage from './component/ProductPage';
+import { products } from './component/data';
+import Card from './component/card';
 import CartPage from './component/CartPage';
-import ProductList from './component/ProductPage';
+import './styles/styles.css';
+
 
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [currentPage, setCurrentPage] = useState('home');
 
   const addToCart = (product, quantity) => {
     setCartItems(prev => {
@@ -21,12 +23,23 @@ export default function App() {
   };
 
   return (
-    <>
-      <Navbar cartCount={cartItems.reduce((acc, item) => acc + item.quantity, 0)} />
-      <Routes>
-        <Route path="/" element={<ProductPage products={ProductList} addToCart={addToCart} />} />
-        <Route path="/cart" element={<CartPage cartItems={cartItems} />} />
-      </Routes>
-    </>
+    <div>
+      <nav className="navbar">
+        <button onClick={() => setCurrentPage('home')}>Home</button>
+        <button onClick={() => setCurrentPage('cart')}>
+          Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})
+        </button>
+      </nav>
+
+      {currentPage === 'home' && (
+        <div className="product-grid">
+          {products.map(product => (
+            <Card key={product.id} product={product} addToCart={addToCart} />
+          ))}
+        </div>
+      )}
+
+      {currentPage === 'cart' && <CartPage cartItems={cartItems} />}
+    </div>
   );
 }

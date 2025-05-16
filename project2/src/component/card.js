@@ -7,7 +7,12 @@ export default function Card({ product, addToCart }) {
 
   return (
     <div className="card">
-      <img src={product.image} alt={product.title} onClick={() => setShowModal(true)} />
+      <img
+        src={product.image}
+        alt={product.title}
+        onClick={() => setShowModal(true)}
+        className="card-img"
+      />
       <h3>{product.title}</h3>
       <p>{product.description}</p>
       <input
@@ -15,8 +20,11 @@ export default function Card({ product, addToCart }) {
         min="1"
         value={quantity}
         onChange={e => setQuantity(Number(e.target.value))}
+        className="quantity-input"
       />
-      <button onClick={() => addToCart(product, quantity)}>Add to Cart</button>
+      <button className="add-btn" onClick={() => addToCart(product, quantity)}>
+        Add to Cart
+      </button>
 
       {showModal && (
         <ModalWindow
